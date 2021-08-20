@@ -1,0 +1,15 @@
+C:\Projects\BooksApi\Books.BusinessService\bin\Debug\netcoreapp3.1\Books.BusinessService.deps.json
+C:\Projects\BooksApi\Books.BusinessService\bin\Debug\netcoreapp3.1\Books.BusinessService.dll
+C:\Projects\BooksApi\Books.BusinessService\bin\Debug\netcoreapp3.1\Books.BusinessService.pdb
+C:\Projects\BooksApi\Books.BusinessService\bin\Debug\netcoreapp3.1\Books.Common.dll
+C:\Projects\BooksApi\Books.BusinessService\bin\Debug\netcoreapp3.1\Books.DataAccess.dll
+C:\Projects\BooksApi\Books.BusinessService\bin\Debug\netcoreapp3.1\Books.Common.pdb
+C:\Projects\BooksApi\Books.BusinessService\bin\Debug\netcoreapp3.1\Books.DataAccess.pdb
+C:\Projects\BooksApi\Books.BusinessService\obj\Debug\netcoreapp3.1\Books.BusinessService.csproj.AssemblyReference.cache
+C:\Projects\BooksApi\Books.BusinessService\obj\Debug\netcoreapp3.1\Books.BusinessService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\BooksApi\Books.BusinessService\obj\Debug\netcoreapp3.1\Books.BusinessService.AssemblyInfoInputs.cache
+C:\Projects\BooksApi\Books.BusinessService\obj\Debug\netcoreapp3.1\Books.BusinessService.AssemblyInfo.cs
+C:\Projects\BooksApi\Books.BusinessService\obj\Debug\netcoreapp3.1\Books.BusinessService.csproj.CoreCompileInputs.cache
+C:\Projects\BooksApi\Books.BusinessService\obj\Debug\netcoreapp3.1\Books.BusinessService.csproj.CopyComplete
+C:\Projects\BooksApi\Books.BusinessService\obj\Debug\netcoreapp3.1\Books.BusinessService.dll
+C:\Projects\BooksApi\Books.BusinessService\obj\Debug\netcoreapp3.1\Books.BusinessService.pdb

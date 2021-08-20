@@ -1,0 +1,12 @@
+C:\Projects\BooksApi\Books.DataAccess\bin\Debug\netcoreapp3.1\Books.DataAccess.deps.json
+C:\Projects\BooksApi\Books.DataAccess\bin\Debug\netcoreapp3.1\Books.DataAccess.dll
+C:\Projects\BooksApi\Books.DataAccess\bin\Debug\netcoreapp3.1\Books.DataAccess.pdb
+C:\Projects\BooksApi\Books.DataAccess\obj\Debug\netcoreapp3.1\Books.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\BooksApi\Books.DataAccess\obj\Debug\netcoreapp3.1\Books.DataAccess.AssemblyInfoInputs.cache
+C:\Projects\BooksApi\Books.DataAccess\obj\Debug\netcoreapp3.1\Books.DataAccess.AssemblyInfo.cs
+C:\Projects\BooksApi\Books.DataAccess\obj\Debug\netcoreapp3.1\Books.DataAccess.csproj.CoreCompileInputs.cache
+C:\Projects\BooksApi\Books.DataAccess\obj\Debug\netcoreapp3.1\Books.DataAccess.dll
+C:\Projects\BooksApi\Books.DataAccess\obj\Debug\netcoreapp3.1\Books.DataAccess.pdb
+C:\Projects\BooksApi\Books.DataAccess\bin\Debug\netcoreapp3.1\Books.DataAccess.runtimeconfig.json
+C:\Projects\BooksApi\Books.DataAccess\bin\Debug\netcoreapp3.1\Books.DataAccess.runtimeconfig.dev.json
+C:\Projects\BooksApi\Books.DataAccess\obj\Debug\netcoreapp3.1\Books.DataAccess.genruntimeconfig.cache
