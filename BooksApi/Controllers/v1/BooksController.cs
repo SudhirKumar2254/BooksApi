@@ -1,5 +1,6 @@
 ﻿using Books.BusinessService.IBusinessService;
 using Books.Common.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BooksApi.Controllers.v1
 {
-    [ApiVersion("1.0")]
+    [ApiVersion("1.0")]    
     public class BooksController : BaseApiController
     {
         private readonly IBooksService _booksService;
@@ -18,6 +19,9 @@ namespace BooksApi.Controllers.v1
             this._booksService = bookService;
         }
 
+        /// <summary>
+        /// This is to get list of all books
+        /// </summary>        
         [HttpGet]
         public async Task<IActionResult> GetBooks()
         {
@@ -30,6 +34,12 @@ namespace BooksApi.Controllers.v1
                 return BadRequest("Something went wrong");
             }
         }
+
+        /// <summary>
+        /// This method is to add a new book
+        /// </summary>
+        /// <param name="addBook"></param>
+        /// <returns></returns>
 
         [HttpPost]
         public async Task<IActionResult> AddBook(BooksDTO addBook)

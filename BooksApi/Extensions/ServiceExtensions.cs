@@ -6,7 +6,9 @@ using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace BooksApi.Extensions
@@ -17,6 +19,7 @@ namespace BooksApi.Extensions
         {            
             services.AddSwaggerGen(c =>
             {
+                c.IncludeXmlComments(string.Format(@"{0}\BooksApi.xml", System.AppDomain.CurrentDomain.BaseDirectory));
 
                 // Resolve the temprary IApiVersionDescriptionProvider service
                 var provider = services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
@@ -29,38 +32,38 @@ namespace BooksApi.Extensions
 
                 // Add a custom filter for settint the default values
                 c.OperationFilter<SwaggerDefaultValues>();
-                //c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                //{
-                //    Name = "Authorization",
-                //    In = ParameterLocation.Header,
-                //    Type = SecuritySchemeType.ApiKey,
-                //    Scheme = "Bearer",
-                //    BearerFormat = "JWT",
-                //    Description = "Input your Bearer token in this format - Bearer {your token here} to access this API",
-                //});
-                //c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                //{
-                //    {
-                //        new OpenApiSecurityScheme
-                //        {
-                //            Reference = new OpenApiReference
-                //            {
-                //                Type = ReferenceType.SecurityScheme,
-                //                Id = "Bearer",
-                //            },
-                //            Scheme = "Bearer",
-                //            Name = "Bearer",
-                //            In = ParameterLocation.Header,
-                //        }, new List<string>()
-                //    },
-                //});
-            });
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    Description = "Input your Bearer token in this format: 'Bearer {your token here}' to access this API",
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer",
+                            },
+                            Scheme = "Bearer",
+                            Name = "Bearer",
+                            In = ParameterLocation.Header,
+                        }, new List<string>()
+                    },
+                });              
+            });            
         }
         static OpenApiInfo CreateInfoForApiVersion(ApiVersionDescription description)
         {
             var info = new OpenApiInfo()
             {
-                Title = "Books API",
+                Title = $"{description.GroupName} {description.ApiVersion}",
                 Version = description.ApiVersion.ToString(),
                 Description = "This Api will be responsible for overall data",
                 Contact = new OpenApiContact

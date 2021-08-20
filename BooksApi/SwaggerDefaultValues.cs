@@ -46,8 +46,7 @@ namespace BooksApi
 
             foreach (var parameter in operation.Parameters)
             {
-                var description = apiDescription.ParameterDescriptions.First(p => p.Name == parameter.Name);
-
+                var description = apiDescription.ParameterDescriptions.First(p => p.Name == parameter.Name);               
                 if (parameter.Description == null)
                 {
                     parameter.Description = description.ModelMetadata?.Description;

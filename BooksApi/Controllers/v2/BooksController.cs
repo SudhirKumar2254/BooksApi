@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace BooksApi.Controllers.v2
 {
     [ApiVersion("2.0")]
-    public class BooksController:BaseApiController
+    public class BooksController : BaseApiController
     {
         private readonly IBooksService _booksService;
 
@@ -16,8 +16,11 @@ namespace BooksApi.Controllers.v2
         {
             this._booksService = bookService;
         }
-      
-       [HttpGet]
+
+        /// <summary>
+        /// This is to get list of all books of v2
+        /// </summary>  
+        [HttpGet]
         public async Task<IActionResult> GetBooks()
         {
             try

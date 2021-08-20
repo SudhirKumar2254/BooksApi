@@ -1,5 +1,6 @@
 using BooksApi.DependencyInjection;
 using BooksApi.Extensions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +35,7 @@ namespace BooksApi
             services.AddVersionedApiExplorerExtension();
             services.AddSwaggerExtension();
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddTokenAuthentication(Configuration);
             DependencyInjection.DependencyInjection dependencyInjection = new DependencyInjection.DependencyInjection(Configuration);
             dependencyInjection.InjectDependencies(services);
 
@@ -50,6 +52,8 @@ namespace BooksApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

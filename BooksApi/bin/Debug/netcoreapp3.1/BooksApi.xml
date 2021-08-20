@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BooksApi</name>
+    </assembly>
+    <members>
+        <member name="M:BooksApi.Controllers.v1.BooksController.GetBooks">
+            <summary>
+            This is to get list of all books
+            </summary>        
+        </member>
+        <member name="M:BooksApi.Controllers.v1.BooksController.AddBook(Books.Common.DTO.BooksDTO)">
+            <summary>
+            This method is to add a new book
+            </summary>
+            <param name="addBook"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BooksApi.Controllers.v2.BooksController.GetBooks">
+            <summary>
+            This is to get list of all books of v2
+            </summary>  
+        </member>
+        <member name="T:BooksApi.SwaggerDefaultValues">
+            <summary>
+            Represents the Swagger/Swashbuckle operation filter used to document the implicit API version parameter.
+            </summary>
+            <remarks>This <see cref="T:Swashbuckle.AspNetCore.SwaggerGen.IOperationFilter"/> is only required due to bugs in the <see cref="T:Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator"/>.
+            Once they are fixed and published, this class can be removed.</remarks>
+        </member>
+        <member name="M:BooksApi.SwaggerDefaultValues.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Applies the filter to the specified operation using the given context.
+            </summary>
+            <param name="operation">The operation to apply the filter to.</param>
+            <param name="context">The current operation filter context.</param>
+        </member>
+    </members>
+</doc>
